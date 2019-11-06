@@ -8,3 +8,4 @@ echo "mate-session" > ~/.Xclients
 chmod a+x ~/.Xclients
 systemctl enable xrdp
 systemctl start xrdp
+reboot
