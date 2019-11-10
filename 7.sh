@@ -56,11 +56,8 @@ speed_v4() {
     speed_test_v4 'http://speedtest-fra1.digitalocean.com/1gb.test' 'digitalocean Frankfurt'
     speed_test_v4 'http://speedtest-ams2.digitalocean.com/1gb.test' 'digitalocean Amsterdam'
     speed_test_v4 'http://cachefly.cachefly.net/100mb.test' 'CacheFly'
-    speed_test_v4 'http://speedtest.tokyo2.linode.com/100MB-tokyo2.bin' 'Linode, Tokyo2, JP'
-    speed_test_v4 'http://speedtest.singapore.linode.com/100MB-singapore.bin' 'Linode, Singapore, SG'
     speed_test_v4 'http://speedtest.london.linode.com/100MB-london.bin' 'Linode, London, UK'
     speed_test_v4 'http://speedtest.frankfurt.linode.com/100MB-frankfurt.bin' 'Linode, Frankfurt, DE'
-    speed_test_v4 'http://speedtest.fremont.linode.com/100MB-fremont.bin' 'Linode, Fremont, CA'
 }
 
 speed_v6() {
