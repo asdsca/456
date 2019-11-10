@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 if  [ ! -e '/usr/bin/wget' ]; then
     echo "Error: wget command not found. You must be install wget command at first."
     exit 1
