@@ -50,7 +50,6 @@ speed_test_v6() {
 speed_v4() {
     speed_test_v4 'https://lon-gb-ping.vultr.com/vultr.com.1000MB.bin' 'vultr london'
     speed_test_v4 'http://speedtest-lon1.digitalocean.com/1gb.test' 'digitalocean london'
-    speed_test_v4 'http://repos.mia.lax-noc.com/speedtests/1gb.bin' 'QuadraNet'
     speed_test_v4 'http://cachefly.cachefly.net/100mb.test' 'CacheFly'
     speed_test_v4 'http://speedtest.tokyo2.linode.com/100MB-tokyo2.bin' 'Linode, Tokyo2, JP'
     speed_test_v4 'http://speedtest.singapore.linode.com/100MB-singapore.bin' 'Linode, Singapore, SG'
