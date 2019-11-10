@@ -146,5 +146,5 @@ echo -e "Average I/O speed    : ${YELLOW}$ioavg MB/s${PLAIN}"
 next
 printf "%-32s%-24s%-14s\n" "Node Name" "IPv4 address" "Download Speed"
 speed_v4 && next
-printf "%-32s%-24s%-14s\n" "Node Name" "IPv6 address" "Download Speed"
-speed_v6 && next
+#printf "%-32s%-24s%-14s\n" "Node Name" "IPv6 address" "Download Speed"
+#speed_v6 && next
