@@ -49,7 +49,12 @@ speed_test_v6() {
 
 speed_v4() {
     speed_test_v4 'https://lon-gb-ping.vultr.com/vultr.com.1000MB.bin' 'vultr london'
+    speed_test_v4 'http://ams-nl-ping.vultr.com/vultr.com.1000MB.bin' 'vultr Amsterdam'
+    speed_test_v4 'http://fra-de-ping.vultr.com/vultr.com.1000MB.bin' 'vultr Frankfurt'
+    speed_test_v4 'http://par-fr-ping.vultr.com/vultr.com.1000MB.bin' 'vultr Paris'
     speed_test_v4 'http://speedtest-lon1.digitalocean.com/1gb.test' 'digitalocean london'
+    speed_test_v4 'http://speedtest-fra1.digitalocean.com/1gb.test' 'digitalocean Frankfurt'
+    speed_test_v4 'http://speedtest-ams2.digitalocean.com/1gb.test' 'digitalocean Amsterdam'
     speed_test_v4 'http://cachefly.cachefly.net/100mb.test' 'CacheFly'
     speed_test_v4 'http://speedtest.tokyo2.linode.com/100MB-tokyo2.bin' 'Linode, Tokyo2, JP'
     speed_test_v4 'http://speedtest.singapore.linode.com/100MB-singapore.bin' 'Linode, Singapore, SG'
@@ -59,13 +64,9 @@ speed_v4() {
 }
 
 speed_v6() {
-    speed_test_v6 'https://lon-gb-ping.vultr.com/vultr.com.1000MB.bin' 'vultr'
     speed_test_v6 'http://speedtest-lon1.digitalocean.com/1gb.test' 'digitalocean london'
-    speed_test_v6 'http://speedtest.atlanta.linode.com/100MB-atlanta.bin' 'Linode, Atlanta, GA'
-    speed_test_v6 'http://speedtest.dallas.linode.com/100MB-dallas.bin' 'Linode, Dallas, TX'
-    speed_test_v6 'http://speedtest.newark.linode.com/100MB-newark.bin' 'Linode, Newark, NJ'
-    speed_test_v6 'http://speedtest.singapore.linode.com/100MB-singapore.bin' 'Linode, Singapore, SG'
-    speed_test_v6 'http://speedtest.tokyo2.linode.com/100MB-tokyo2.bin' 'Linode, Tokyo2, JP'
+    speed_test_v6 'http://speedtest-fra1.digitalocean.com/1gb.test' 'digitalocean Frankfurt'
+    speed_test_v6 'http://speedtest-ams2.digitalocean.com/1gb.test' 'digitalocean Amsterdam'
 }
 
 io_test() {
