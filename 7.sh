@@ -63,6 +63,7 @@ speed_v4() {
 }
 
 speed_v6() {
+    speed_test_v6 'https://lon-gb-ping.vultr.com/vultr.com.1000MB.bin' 'vultr'
     speed_test_v6 'http://speedtest.atlanta.linode.com/100MB-atlanta.bin' 'Linode, Atlanta, GA'
     speed_test_v6 'http://speedtest.dallas.linode.com/100MB-dallas.bin' 'Linode, Dallas, TX'
     speed_test_v6 'http://speedtest.newark.linode.com/100MB-newark.bin' 'Linode, Newark, NJ'
@@ -145,7 +146,7 @@ echo -e "Average I/O speed    : ${YELLOW}$ioavg MB/s${PLAIN}"
 next
 printf "%-32s%-24s%-14s\n" "Node Name" "IPv4 address" "Download Speed"
 speed_v4 && next
-#if [[ "$ipv6" != "" ]]; then
-#    printf "%-32s%-24s%-14s\n" "Node Name" "IPv6 address" "Download Speed"
-#    speed_v6 && next
-#fi
+if [[ "$ipv6" != "" ]]; then
+    printf "%-32s%-24s%-14s\n" "Node Name" "IPv6 address" "Download Speed"
+    speed_v6 && next
+fi
