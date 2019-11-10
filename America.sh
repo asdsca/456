@@ -63,7 +63,6 @@ speed_v4() {
 }
 
 speed_v6() {
-    speed_test_v6 'http://sjo-ca-us-ping.vultr.com/vultr.com.1000MB.bin' 'vultr siliconvalley'
     speed_test_v6 'http://speedtest-nyc1.digitalocean.com/1gb.test' 'digitalocean newyork'
 }
 
