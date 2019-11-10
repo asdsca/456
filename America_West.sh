@@ -48,22 +48,14 @@ speed_test_v6() {
 }
 
 speed_v4() {
-    #speed_test_v4 'http://ga-us-ping.vultr.com/vultr.com.1000MB.bin' 'vultr alanta'
-    #speed_test_v4 'http://il-us-ping.vultr.com/vultr.com.1000MB.bin' 'vultr chicago'
-    #speed_test_v4 'http://tx-us-ping.vultr.com/vultr.com.1000MB.bin' 'vultr dallas'
     speed_test_v4 'http://lax-ca-us-ping.vultr.com/vultr.com.1000MB.bin' 'vultr losangeles'
-    #speed_test_v4 'http://fl-us-ping.vultr.com/vultr.com.1000MB.bin' 'vultr miami'
-    #speed_test_v4 'http://nj-us-ping.vultr.com/vultr.com.1000MB.bin' 'vultr newjersey'
     speed_test_v4 'http://wa-us-ping.vultr.com/vultr.com.1000MB.bin' 'vultr seattle'
     speed_test_v4 'http://sjo-ca-us-ping.vultr.com/vultr.com.1000MB.bin' 'vultr siliconvalley'
-    #speed_test_v4 'http://tor-ca-ping.vultr.com/vultr.com.1000MB.bin' 'vultr toronto'
-    #speed_test_v4 'http://speedtest-nyc1.digitalocean.com/1gb.test' 'digitalocean newyork'
     speed_test_v4 'http://cachefly.cachefly.net/100mb.test' 'CacheFly'
     speed_test_v4 'http://speedtest.fremont.linode.com/100MB-fremont.bin' 'Linode, Fremont, CA'
 }
 
 speed_v6() {
-    #speed_test_v6 'http://speedtest-nyc1.digitalocean.com/1gb.test' 'digitalocean newyork'
 }
 
 io_test() {
