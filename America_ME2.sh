@@ -55,8 +55,8 @@ speed_v4() {
     speed_test_v4 'http://nj-us-ping.vultr.com/vultr.com.1000MB.bin' 'vultr newjersey'
     speed_test_v4 'http://tor-ca-ping.vultr.com/vultr.com.1000MB.bin' 'vultr toronto'
     speed_test_v4 'http://speedtest-nyc1.digitalocean.com/1gb.test' 'digitalocean newyork'
-    speed_test_v4 'http://mirror.wdc1.us.leaseweb.net/speedtest/1000mb.bin' 'leaseweb washintondc'
     speed_test_v4 'http://mirror.dal10.us.leaseweb.net/speedtest/1000mb.bin' 'leaseweb dallas'
+    speed_test_v4 'http://66.7.205.190/lg/1024MB.test' 'hostdime orlando'
     speed_test_v4 'http://cachefly.cachefly.net/100mb.test' 'CacheFly'
 }
 
