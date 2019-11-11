@@ -55,6 +55,9 @@ speed_v4() {
     speed_test_v4 'http://nj-us-ping.vultr.com/vultr.com.1000MB.bin' 'vultr newjersey'
     speed_test_v4 'http://tor-ca-ping.vultr.com/vultr.com.1000MB.bin' 'vultr toronto'
     speed_test_v4 'http://speedtest-nyc1.digitalocean.com/1gb.test' 'digitalocean newyork'
+    speed_test_v4 'http://lg.nyc.ramnode.com/static/1000MB.test' 'ramnode newyork'
+    speed_test_v4 'http://lg.atl.ramnode.com/static/1000MB.test' 'ramnode atlanta'
+    speed_test_v4 'http://speedtest-nyc1.digitalocean.com/1gb.test' 'digitalocean newyork'
     speed_test_v4 'http://cachefly.cachefly.net/100mb.test' 'CacheFly'
 }
 
