@@ -48,18 +48,13 @@ speed_test_v6() {
 }
 
 speed_v4() {
-    #speed_test_v4 'http://ga-us-ping.vultr.com/vultr.com.1000MB.bin' 'vultr alanta'
-    #speed_test_v4 'http://il-us-ping.vultr.com/vultr.com.1000MB.bin' 'vultr chicago'
-    #speed_test_v4 'http://tx-us-ping.vultr.com/vultr.com.1000MB.bin' 'vultr dallas'
     speed_test_v4 'http://lax-ca-us-ping.vultr.com/vultr.com.1000MB.bin' 'vultr losangeles'
-    #speed_test_v4 'http://fl-us-ping.vultr.com/vultr.com.1000MB.bin' 'vultr miami'
-    #speed_test_v4 'http://nj-us-ping.vultr.com/vultr.com.1000MB.bin' 'vultr newjersey'
     speed_test_v4 'http://wa-us-ping.vultr.com/vultr.com.1000MB.bin' 'vultr seattle'
     speed_test_v4 'http://sjo-ca-us-ping.vultr.com/vultr.com.1000MB.bin' 'vultr siliconvalley'
-    #speed_test_v4 'http://tor-ca-ping.vultr.com/vultr.com.1000MB.bin' 'vultr toronto'
-    #speed_test_v4 'http://speedtest-nyc1.digitalocean.com/1gb.test' 'digitalocean newyork'
+    speed_test_v4 'http://lg.sea.ramnode.com/static/1000MB.test' 'ramnode Seattle'
+    speed_test_v4 'http://lg.la.ramnode.com/static/1000MB.test' 'ramnode Los Angeles'
+    speed_test_v4 'http://192.157.214.6/1GB.test' 'BudgetVM Los Angele'
     speed_test_v4 'http://cachefly.cachefly.net/100mb.test' 'CacheFly'
-    speed_test_v4 'http://speedtest.fremont.linode.com/100MB-fremont.bin' 'Linode, Fremont, CA'
 }
 
 speed_v6() {
@@ -136,7 +131,7 @@ echo -e "Average I/O speed    : ${YELLOW}$ioavg MB/s${PLAIN}"
 next
 printf "%-32s%-24s%-14s\n" "Node Name" "IPv4 address" "Download Speed"
 speed_v4 && next
-if [[ "$ipv6" != "" ]]; then
-    printf "%-32s%-24s%-14s\n" "Node Name" "IPv6 address" "Download Speed"
-    speed_v6 && next
-fi
+# if [[ "$ipv6" != "" ]]; then
+#     printf "%-32s%-24s%-14s\n" "Node Name" "IPv6 address" "Download Speed"
+#     speed_v6 && next
+# fi
