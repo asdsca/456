@@ -22,3 +22,13 @@ mkdir /data/GoogleDrive
 wget -O qBittorrentCentOS7install.sh https://zhujiwiki.com/wp-content/uploads/2018/12/qBittorrentCentOS7install.sh && bash qBittorrentCentOS7install.sh
 iptables -t nat -A PREROUTING -p udp -d 141.98.218.3 -j REDIRECT
 iptables -t nat -A PREROUTING -p tcp -d 141.98.218.3 -j REDIRECT
+
+
+iptables -t nat -A PREROUTING -p udp -d 23.160.193.152 -j REDIRECT
+iptables -t nat -A PREROUTING -p tcp -d 23.160.193.152 -j REDIRECT
+iptables -t nat -A PREROUTING -p udp -d 23.160.193.153 -j REDIRECT
+iptables -t nat -A PREROUTING -p tcp -d 23.160.193.153 -j REDIRECT
+iptables -t nat -A PREROUTING -p udp -d 23.160.193.154 -j REDIRECT
+iptables -t nat -A PREROUTING -p tcp -d 23.160.193.154 -j REDIRECT
+iptables -t nat -A PREROUTING -p udp -d 23.160.193.155 -j REDIRECT
+iptables -t nat -A PREROUTING -p tcp -d 23.160.193.155 -j REDIRECT
