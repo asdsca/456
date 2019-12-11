@@ -354,7 +354,7 @@ acme(){
         echo -e "${OK} ${GreenBG} SSL 证书生成成功 ${Font}"
         sleep 2
         mkdir /data
-        ~/.acme.sh/acme.sh --installcert -d ${domain} --fullchainpath /data/v2ray.crt --keypath /data/v2ray.key --ecc
+        ~/.acme.sh/acme.sh --installcert -d ${domain} --fullchainpath /data/mycrt.crt --keypath /data/mykey.key --ecc
         if [[ $? -eq 0 ]];then
         echo -e "${OK} ${GreenBG} 证书配置成功 ${Font}"
         sleep 2
@@ -488,16 +488,8 @@ show_information(){
 
 }
 ssl_judge_and_install(){
-    if [[ -f "/data/v2ray.key" && -f "/data/v2ray.crt" ]];then
-        echo "证书文件已存在"
-    elif [[ -f "~/.acme.sh/${domain}_ecc/${domain}.key" && -f "~/.acme.sh/${domain}_ecc/${domain}.cer" ]];then
-        echo "证书文件已存在"
-        ~/.acme.sh/acme.sh --installcert -d ${domain} --fullchainpath /data/v2ray.crt --keypath /data/v2ray.key --ecc
-        judge "证书应用"
-    else
-        ssl_install
-        acme
-    fi
+    ssl_install
+    acme
 }
 
 nginx_systemd(){
@@ -555,27 +547,33 @@ uninstall_all(){
     [[ -d $web_dir ]] && rm -rf $web_dir
     echo -e "${OK} ${GreenBG} 已卸载，SSL证书文件已保留 ${Font}"
 }
+set_tomcat_https(){
+    cd /data
+    openssl pkcs12 -export -in mycert.crt -inkey mykey.key -out keystore2.pkcs12 -password pass:123456
+    keytool -importkeystore -v -srckeystore mycert.p12 -srcstoretype pkcs12 -srcstorepass 123456 -destkeystore tomcat.keystore -deststoretype jks -deststorepass 123456
+}
 main(){
-    is_root
-    check_system
-    chrony_install
-    dependency_install
-    basic_optimization
+    #is_root
+    #check_system
+    #chrony_install
+    #dependency_install
+    #basic_optimization
     domain_check
-    port_alterid_set
-    v2ray_install
+    #port_alterid_set
+    #v2ray_install
     port_exist_check 80
     port_exist_check ${port}
-    nginx_exist_chek
-    v2ray_conf_add
-    nginx_conf_add
-    web_camouflage
+    #nginx_exist_chek
+    #v2ray_conf_add
+    #nginx_conf_add
+    #web_camouflage
 
     ssl_judge_and_install
-    nginx_systemd
-    show_information
-    start_process_systemd
-    acme_cron_update
+    #nginx_systemd
+    #show_information
+    #start_process_systemd
+    #acme_cron_update
+    set_tomcat_https
 }
 list(){
     case $1 in
@@ -596,4 +594,4 @@ list(){
             ;;
     esac
 }
-list boost
+list $1
