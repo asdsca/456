@@ -1,1 +1,5 @@
-bash <(curl -L -s https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/install.sh) | tee v2ray_ins.log
+ssl_judge_and_install(){
+    if [[ -f "/data/mycrt.key" && -f "/data/mykey.crt" ]];then
+        echo "证书文件已存在"
+}
+ssl_judge_and_install
