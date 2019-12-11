@@ -554,7 +554,7 @@ set_tomcat_https(){
 }
 main(){
     #is_root
-    #check_system
+    check_system
     #chrony_install
     #dependency_install
     #basic_optimization
