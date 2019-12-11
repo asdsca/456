@@ -488,7 +488,7 @@ show_information(){
 
 }
 ssl_judge_and_install(){
-    if [[ -f "/data/mycrt.key" && -f "/data/mykey.crt" ]];then
+    if [[ -f "/data/mykey.key" && -f "/data/mycrt.crt" ]];then
         echo "证书文件已存在"
     else
         ssl_install
