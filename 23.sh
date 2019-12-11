@@ -488,8 +488,12 @@ show_information(){
 
 }
 ssl_judge_and_install(){
-    ssl_install
-    acme
+    if [[ -f "/data/mycrt.key" && -f "/data/mykey.crt" ]];then
+        echo "证书文件已存在"
+    else
+        ssl_install
+        acme
+    fi
 }
 
 nginx_systemd(){
@@ -549,7 +553,7 @@ uninstall_all(){
 }
 set_tomcat_https(){
     cd /data
-    openssl pkcs12 -export -in mycert.crt -inkey mykey.key -out keystore2.pkcs12 -password pass:123456
+    openssl pkcs12 -export -in mycrt.crt -inkey mykey.key -out keystore2.pkcs12 -password pass:123456
     keytool -importkeystore -v -srckeystore mycert.p12 -srcstoretype pkcs12 -srcstorepass 123456 -destkeystore tomcat.keystore -deststoretype jks -deststorepass 123456
 }
 main(){
